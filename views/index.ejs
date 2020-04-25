@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Three.JS Test</title>
+    <link rel="stylesheet" href="./styles/test.css">
+</head>
+<body>
+<div class="controlPanel">
+    <div class="controlSection">
+        <label>
+            X-Translation
+            <input id="xTranslation" type="range" min="-4" max="4" value="0">
+            <input type="text" id="xOutput" value="0">
+        </label>
+        <label>
+            Y-Translation
+            <input id="yTranslation" type="range" min="-4" max="4" value="0">
+            <input type="text" id="yOutput" value="0">
+        </label>
+        <label>
+            Z-Translation
+            <input id="zTranslation" type="range" min="-4" max="4" value="0">
+            <input type="text"  id="zOutput" value="0">
+        </label>
+    </div>
+    <div class="controlSection">
+        <label>
+            X-Rotation
+            <input id="xRotation" type="range" min="-360" max="360" value="0">
+            <input type="text" id="xOutputRotation" value="0">
+        </label>
+        <label>
+            Y-Rotation
+            <input id="yRotation" type="range" min="-360" max="360" value="0">
+            <input type="text" id="yOutputRotation" value="0">
+        </label>
+        <label>
+            Z-Rotation
+            <input id="zRotation" type="range" min="-360" max="360" value="0">
+            <input type="text" id="zOutputRotation" value="0">
+        </label>
+    </div>
+</div>
+<script src="three.js-master/build/three.js"></script>
+<script type="module" src="../JS/Test.js"></script>
+</body>
+</html>

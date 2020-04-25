@@ -1,0 +1,25 @@
+{
+  "name": "aeom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "ejs": "^3.1.2",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Flombo/MoebelKonfigurator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Flombo/MoebelKonfigurator/issues"
+  },
+  "homepage": "https://github.com/Flombo/MoebelKonfigurator#readme"
+}

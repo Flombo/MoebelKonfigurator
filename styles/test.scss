@@ -1,0 +1,47 @@
+$contentBG : #202020;
+$controlBG : #fff;
+$controlSectionBG : lightgray;
+html{
+    width: 100%;
+    margin-left: 0;
+    top: 0;
+    body{
+        width: 100%;
+        top: 0;
+        margin-left: 0;
+        background-color: $controlBG;
+        .controlPanel{
+            display: flex;
+            position: fixed;
+            padding: 1%;
+            .controlSection{
+                display: flex;
+                flex-direction: column;
+                border: 4px solid lavender;
+                background-color: $controlBG;
+                border-radius: 10px;
+                max-width: 60%;
+                margin-left: 5%;
+                padding: 0.5%;
+                label{
+                    padding: 0.5%;
+                    display: flex;
+                }
+                input{
+                    background-color: orangered;
+                    color: $controlBG;
+                    border: 2px solid orangered;
+                    border-radius: 10px;
+                    padding: 1%;
+                    &:focus{
+                        transition-property: background-color;
+                        transition-timing-function: ease-in-out;
+                        transition-duration: 0.2s;
+                        background-color: lightcoral;
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+}

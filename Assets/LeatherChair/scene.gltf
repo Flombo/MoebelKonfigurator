@@ -1,0 +1,435 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 8062,
+      "max": [
+        0.7659909725189209,
+        -0.23817600309848785,
+        0.27347400784492493
+      ],
+      "min": [
+        -0.7659909725189209,
+        -0.2691510021686554,
+        -0.2644990086555481
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 96744,
+      "componentType": 5126,
+      "count": 8062,
+      "max": [
+        0.99999278783798218,
+        0.9999997615814209,
+        1
+      ],
+      "min": [
+        -0.99998736381530762,
+        -1,
+        -1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 8062,
+      "max": [
+        0.99998396635055542,
+        0.9999992847442627,
+        0.9999733567237854,
+        1
+      ],
+      "min": [
+        -0.9999997615814209,
+        -0.99999761581420898,
+        -0.99523806571960449,
+        1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 8062,
+      "max": [
+        0.99999898672103882,
+        0.99929702281951904
+      ],
+      "min": [
+        1.4901200273698123e-08,
+        0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 46368,
+      "max": [
+        8061
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 193488,
+      "componentType": 5126,
+      "count": 31775,
+      "max": [
+        1,
+        0.2691510021686554,
+        0.32838600873947144
+      ],
+      "min": [
+        -1,
+        -0.24792000651359558,
+        -0.32838600873947144
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 574788,
+      "componentType": 5126,
+      "count": 31775,
+      "max": [
+        1,
+        1,
+        0.9999995231628418
+      ],
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 128992,
+      "componentType": 5126,
+      "count": 31775,
+      "max": [
+        1,
+        0.99999839067459106,
+        0.99999970197677612,
+        1
+      ],
+      "min": [
+        -0.99999034404754639,
+        -0.9999968409538269,
+        -0.99999982118606567,
+        -1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 64496,
+      "componentType": 5126,
+      "count": 31775,
+      "max": [
+        0.99999898672103882,
+        0.99976801872253418
+      ],
+      "min": [
+        2.3841900542720396e-07,
+        2.235170057929281e-07
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 185472,
+      "componentType": 5125,
+      "count": 183258,
+      "max": [
+        31774
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Raphael Escamilla (https://sketchfab.com/Raffey)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/grey-sofa-e94e15859aff4c5ebf4791c46ab8ba42",
+      "title": "Grey Sofa"
+    },
+    "generator": "Sketchfab-8.27.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 918504,
+      "byteOffset": 0,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 318696,
+      "byteOffset": 918504,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 956088,
+      "byteOffset": 1237200,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 637392,
+      "byteOffset": 2193288,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 2830680,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/Mat1_baseColor.jpeg"
+    },
+    {
+      "uri": "textures/Mat1_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/Mat1_normal.png"
+    },
+    {
+      "uri": "textures/Mat2_baseColor.jpeg"
+    },
+    {
+      "uri": "textures/Mat2_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/Mat2_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "Mat1",
+      "normalTexture": {
+        "index": 2,
+        "scale": 1,
+        "texCoord": 0
+      },
+      "occlusionTexture": {
+        "index": 1,
+        "strength": 1,
+        "texCoord": 0
+      },
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "baseColorTexture": {
+          "index": 0,
+          "texCoord": 0
+        },
+        "metallicFactor": 1,
+        "metallicRoughnessTexture": {
+          "index": 1,
+          "texCoord": 0
+        },
+        "roughnessFactor": 1
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Mat2",
+      "normalTexture": {
+        "index": 5,
+        "scale": 1,
+        "texCoord": 0
+      },
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "baseColorTexture": {
+          "index": 3,
+          "texCoord": 0
+        },
+        "metallicFactor": 1,
+        "metallicRoughnessTexture": {
+          "index": 4,
+          "texCoord": 0
+        },
+        "roughnessFactor": 1
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "defaultMaterial",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "defaultMaterial",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TANGENT": 7,
+            "TEXCOORD_0": 8
+          },
+          "indices": 9,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode (gltf orientation matrix)",
+      "rotation": [
+        -0.70710678118654746,
+        -0,
+        -0,
+        0.70710678118654757
+      ]
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "RootNode (model correction matrix)"
+    },
+    {
+      "children": [
+        3,
+        5
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        -4.3711390063094768e-08,
+        0.999999999999999,
+        0,
+        0,
+        -0.999999999999999,
+        -4.3711390063094768e-08,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "name": "Collada visual scene group"
+    },
+    {
+      "children": [
+        4
+      ],
+      "name": "geo1"
+    },
+    {
+      "mesh": 0,
+      "name": "defaultMaterial"
+    },
+    {
+      "children": [
+        6
+      ],
+      "name": "geo1"
+    },
+    {
+      "mesh": 1,
+      "name": "defaultMaterial"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "OSG_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    },
+    {
+      "sampler": 0,
+      "source": 3
+    },
+    {
+      "sampler": 0,
+      "source": 4
+    },
+    {
+      "sampler": 0,
+      "source": 5
+    }
+  ]
+}
+
