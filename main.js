@@ -8,4 +8,8 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
+app.get('/furniture-config', (rey, res) => {
+   res.render('furnitureConfiguration');
+});
+
 app.listen(3000);

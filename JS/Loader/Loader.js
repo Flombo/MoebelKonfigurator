@@ -1,5 +1,6 @@
 import { GLTFLoader } from "../../three.js-master/examples/jsm/loaders/GLTFLoader.js";
 import Movement from "../Movement/Movement.js";
+import MaterialManager from "../MaterialManager.js";
 
 export default class  {
     constructor() {
@@ -23,9 +24,18 @@ export default class  {
                }
             });
             new Movement(gltfScene, camera, domElement);
+            new MaterialManager(gltfScene);
             scene.add(gltfScene);
         }, undefined, function ( error ) {
             console.error( error );
         } );
+    }
+
+    loadTestModel(scene, camera, domElement){
+        let cubeGeo = new THREE.CubeGeometry(5,5,5,5,5,5);
+        let cube = new THREE.Mesh(cubeGeo, new THREE.MeshToonMaterial('#fff'));
+        new Movement(cube, camera, domElement);
+        new MaterialManager(cube);
+        scene.add(cube);
     }
 }

@@ -46,10 +46,7 @@ function init() {
 
     let loader = new Loader();
     loader.loadModel('../../Assets/LeatherChair/scene.gltf', scene, camera, renderer.domElement);
-
-    // let ground = new THREE.Plane(10, 0.5, 2, 2);
-    // let groundMaterial = new THREE.MeshPhongMaterial('darkslategrey', 'lightgrey', 2);
-    // scene.add(ground);
+    //loader.loadTestModel(scene, camera, renderer.domElement);
 
     let hemiLight = new THREE.HemisphereLight(0xffeeb1, 0x080820, 4);
     scene.add(hemiLight);

@@ -21,10 +21,11 @@ html body .controlPanel {
 html body .controlPanel .controlSection {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   border: 4px solid lavender;
   background-color: #fff;
   border-radius: 10px;
-  max-width: 60%;
+  max-width: 30%;
   margin-left: 5%;
   padding: 0.5%;
 }
@@ -43,8 +44,19 @@ html body .controlPanel .controlSection input:focus {
   transition-property: background-color;
   transition-timing-function: ease-in-out;
   transition-duration: 0.2s;
-  background-color: lightcoral;
+  background-color: springgreen;
   outline: none;
+}
+html body .controlPanel .controlSection input.selection {
+  margin: 0 2% 0 2%;
+  background-color: #fff;
+  cursor: pointer;
+  max-width: 5%;
+  background-repeat: no-repeat;
+  background-size: 75px;
+}
+html body .controlPanel .controlSection input.selection:hover {
+  opacity: 50%;
 }
 
 /*# sourceMappingURL=test.css.map */
