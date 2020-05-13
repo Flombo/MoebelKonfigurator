@@ -6,24 +6,59 @@ export default class Movement{
         this.xTranslationSlider = document.getElementById("xTranslation");
         this.yTranslationSlider = document.getElementById("yTranslation");
         this.zTranslationSlider = document.getElementById("zTranslation");
+
         this.xRotationSlider = document.getElementById("xRotation");
         this.yRotationSlider = document.getElementById("yRotation");
         this.zRotationSlider = document.getElementById("zRotation");
+
+        this.xScaleSlider = document.getElementById("xScale");
+        this.yScaleSlider = document.getElementById("yScale");
+        this.zScaleSlider = document.getElementById("zScale");
+
         this.outputX = document.getElementById("xOutput");
         this.outputY = document.getElementById("yOutput");
         this.outputZ = document.getElementById("zOutput");
+
         this.yOutputRotation = document.getElementById("yOutputRotation");
         this.xOutputRotation = document.getElementById("xOutputRotation");
         this.zOutputRotation = document.getElementById("zOutputRotation");
+
+        this.xOutputScale = document.getElementById("xOutputScale");
+        this.yOutputScale = document.getElementById("yOutputScale");
+        this.zOutputScale = document.getElementById("zOutputScale");
+
         this.z = 0;
         this.x = 0;
         this.y = 0;
+
         this.model = model;
+
+        this.originalScaleX = this.model.scale.x;
+        this.originalScaleY = this.model.scale.y;
+        this.originalScaleZ = this.model.scale.z;
+
         this.camera = camera;
         this.domElement = domElement;
         this.orbitControls = new OrbitControls(this.camera, this.domElement);
         this.initTranslationHandling();
         this.initRotationHandling();
+        this.initScaleHandling();
+    }
+
+    initScaleHandling(){
+        this.changeScalingOutputBoxes();
+        this.xScaleSlider.addEventListener("input", () => { this.scaleModel() });
+        this.zScaleSlider.addEventListener("input", () => { this.scaleModel() });
+        this.yScaleSlider.addEventListener("input", () => { this.scaleModel() });
+        this.xOutputScale.addEventListener("input", () => {
+            this.changeOutputSlider(this.xOutputScale, this.xScaleSlider);
+        });
+        this.yOutputScale.addEventListener("input", () => {
+            this.changeOutputSlider(this.yOutputScale, this.yScaleSlider);
+        });
+        this.zOutputScale.addEventListener("input", () => {
+            this.changeOutputSlider(this.zOutputScale, this.zScaleSlider);
+        });
     }
 
     initRotationHandling(){
@@ -66,6 +101,12 @@ export default class Movement{
         this.zTranslationSlider.addEventListener("input", () => { this.translateModel()});
     }
 
+    changeScalingOutputBoxes() {
+        this.changeOutputSlider(this.xOutputScale, this.xScaleSlider);
+        this.changeOutputSlider(this.yOutputScale, this.yScaleSlider);
+        this.changeOutputSlider(this.zOutputScale, this.zScaleSlider);
+    }
+
     changeRotationOutputBoxes() {
         this.changeOutputSlider(this.xOutputRotation, this.xRotationSlider);
         this.changeOutputSlider(this.yOutputRotation, this.yRotationSlider);
@@ -89,6 +130,18 @@ export default class Movement{
 
     changeOutputSlider(output, slider){
         output.value = slider.value;
+    }
+
+    scaleModel() {
+        this.changeScalingOutputBoxes();
+        let x = this.xScaleSlider.value * 10;
+        let y = this.yScaleSlider.value * 10;
+        let z = this.zScaleSlider.value * 10;
+        if(z > 1 || y > 1|| x > 1) {
+            this.model.scale.set(x, y, z);
+        } else {
+            this.model.scale.set(10,10,10);
+        }
     }
 
     rotateModel() {

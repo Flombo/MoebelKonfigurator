@@ -17,16 +17,16 @@ html body .controlPanel {
   display: flex;
   position: fixed;
   padding: 1%;
+  max-width: 65%;
 }
 html body .controlPanel .controlSection {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   border: 4px solid lavender;
   background-color: #fff;
   border-radius: 10px;
-  max-width: 30%;
-  margin-left: 5%;
+  max-width: 35%;
+  margin-left: 1%;
   padding: 0.5%;
 }
 html body .controlPanel .controlSection label {
