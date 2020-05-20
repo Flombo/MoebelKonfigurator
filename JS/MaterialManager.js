@@ -33,6 +33,9 @@ export default class MaterialManager {
         let texturePath = "../" + input.name;
         this.model.traverse( n => {
            if(n.isMesh){
+               if(n.material === undefined){
+                   n = new THREE.MeshBasicMaterial();
+               }
                n.material.map = this.textureLoader.load(texturePath);
            }
         });

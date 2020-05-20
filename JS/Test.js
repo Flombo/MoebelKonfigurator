@@ -39,14 +39,14 @@ function init() {
     camera.position.z = 12;
 
     renderer = new THREE.WebGLRenderer({antialias : true});
-    renderer.toneMapping = THREE.ReinhardToneMapping;
+    renderer.toneMapping = THREE.Uncharted2ToneMapping;
     renderer.toneMappingExposure = 2.3;
     renderer.shadowMap.enabled = true;
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.appendChild(renderer.domElement);
 
     let loader = new Loader();
-    loader.loadModel('../../Assets/LeatherChair/scene.gltf', scene, camera, renderer.domElement);
+    loader.loadModel('../../Assets/Schrank/schrank.gltf', scene, camera, renderer.domElement);
 
     let hemiLight = new THREE.HemisphereLight(0xffeeb1, 0x080820, 4);
     scene.add(hemiLight);

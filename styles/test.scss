@@ -18,14 +18,15 @@ html{
             display: flex;
             position: fixed;
             padding: 1%;
-            max-width: 65%;
+            max-width: 100%;
             .controlSection{
                 flex-direction: column;
                 justify-content: center;
                 border: 4px solid lavender;
                 background-color: $controlBG;
                 border-radius: 10px;
-                max-width: 35%;
+                max-width: 20%;
+                min-width: 22%;
                 margin-left: 1%;
                 padding: 0.5%;
                 label{
@@ -38,6 +39,8 @@ html{
                     border: 2px solid orangered;
                     border-radius: 10px;
                     padding: 1%;
+                    min-width: 10%;
+                    max-width: 30%;
                     &:focus{
                         transition-property: background-color;
                         transition-timing-function: ease-in-out;
