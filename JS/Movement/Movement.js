@@ -64,7 +64,6 @@ export default class Movement{
         });
         this.yScaleSlider.addEventListener("input", () => {
             this.scaleModel();
-            console.log(this.currentShelfYPos);
             this.currentShelfYPos = 0;
             this.addRegal();
         });
@@ -116,7 +115,7 @@ export default class Movement{
             if(mesh.name === "leftSide"){
                 let box = new THREE.Box3().setFromObject(mesh);
                 box.getCenter(this.model.origin);
-                if(this.regalAnzahl > 1) {
+                if(this.regalAnzahl.value > 1) {
                     this.currentShelfYPos = box.getSize(this.model.origin).y / this.regalAnzahl.value;
                     clonedShelf = this.shelfMesh.clone();
                     this.shelfs.push(clonedShelf);

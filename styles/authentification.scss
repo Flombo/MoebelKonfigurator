@@ -1,0 +1,231 @@
+$bg: #202020;
+$border: 2px solid #ffffff;
+$rad: 10px;
+$activeColor: springgreen;
+
+@keyframes switchMobile{
+    0%{
+        width: 100%;
+        opacity: 100%;
+    }
+    25%{
+        width: 75%;
+        opacity: 75%;
+    }
+    50%{
+        width: 50%;
+        opacity: 50%;
+    }
+    75%{
+        width: 25%;
+        opacity: 25%;
+    }
+    100%{
+        width: 0%;
+        opacity: 0%;
+    }
+}
+
+@keyframes switch{
+    0%{
+        width: 55%;
+        opacity: 100%;
+    }
+    25%{
+        width: 45%;
+        opacity: 75%;
+    }
+    50%{
+        width: 35%;
+        opacity: 50%;
+    }
+    75%{
+        width: 25%;
+        opacity: 25%;
+    }
+    100%{
+        width: 0%;
+        opacity: 0%;
+    }
+}
+
+html{
+    background-color: $bg;
+    width: 100%;
+    height: 100%;
+    top: 0;
+
+    body{
+        font-family: 'Roboto';
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin: 0;
+
+        h1{
+            font-family: Roboto;
+            color: #ffffff;
+        }
+
+        form{
+            z-index: 9999999;
+            width: 100%;
+
+            input{
+                background-color: $bg;
+                border: $border;
+                border-radius: $rad;
+                color: #ffffff;
+                width: 75%;
+                padding: 1%;
+                margin-bottom: 2%;
+                transition-property: background-color;
+                transition-duration: 0.3s;
+                transition-timing-function: ease-in-out;
+                font-size: 40px;
+            }
+
+            input:focus{
+                outline: 0;
+                background-color: #ffffff;
+                color: #000;
+            }
+
+            .buttonContainer{
+
+                width: 81%;
+                margin-left: 4%;
+
+                button{
+                    background-color: $bg;
+                    border: $border;
+                    border-radius: $rad;
+                    color: #ffffff;
+                    padding: 3%;
+                    width: 47%;
+                    transition-property: background-color;
+                    transition-duration: 0.3s;
+                    transition-timing-function: ease-in-out;
+                    font-size: 30px;
+
+                    &:focus{
+                        outline: 0;
+                    }
+
+                    &:hover{
+                        cursor: pointer;
+                        opacity: 50%;
+                    }
+
+                    &#register{
+                        border-color: salmon;
+                        color: salmon;
+                    }
+
+                }
+
+                .locked{
+                    transition-property: border-color;
+                    transition-duration: 0.5s;
+                    transition-timing-function: ease-in-out;
+                    border-color: lightgrey;
+                    color: lightgrey;
+                    cursor: not-allowed !important;
+                }
+
+                .unlocked{
+                    border-color: $activeColor;
+                    color: $activeColor;
+                }
+
+            }
+
+        }
+
+        .visible{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            animation: switchMobile 0.3s ease-in reverse;
+        }
+
+        .invisible{
+            display: none;
+            animation: switchMobile 0.3s ease-out;
+        }
+
+        p{
+            font-size: 15px;
+        }
+
+        .error{
+            color: salmon;
+        }
+
+        .success{
+            color: $activeColor;
+        }
+
+        #animationContainer{
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+
+            img{
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                opacity: 0.5;
+                animation: rising 10s infinite ease-in;
+            }
+
+            @keyframes rising {
+                0%{
+                    transform: translateX(0);
+                    transform: translateZ(0);
+                }
+                50%{
+                    transform: translateX(500px);
+                    transform: translateZ(500px);
+                }
+                100%{
+                    bottom: 3080px;
+                    left: 3000px;
+                    transform: translateX(1000px);
+                    transform: translateZ(1000px);
+                }
+            }
+
+        }
+
+    }
+}
+
+@media screen and (min-width: 1000px){
+    html{
+        body {
+            form {
+                width: 55%;
+            }
+
+            .visible{
+                animation: switch 0.3s ease-in reverse;
+            }
+
+            .invisible{
+                animation: switch 0.3s ease-out;
+            }
+
+        }
+    }
+}
