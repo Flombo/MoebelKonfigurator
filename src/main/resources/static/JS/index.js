@@ -1,9 +1,10 @@
-import {OrbitControls} from "../three.js-master/examples/jsm/controls/OrbitControls.js";
+import {OrbitControls} from "/three.js-master/examples/jsm/controls/OrbitControls.js";
 
 let camera;
 let scene;
 let renderer;
 let spotLight;
+let orbitControls;
 
 window.onloadend = init();
 
@@ -12,12 +13,12 @@ function init() {
     scene.add(new THREE.AxesHelper(500));
 
     let materialArray = [];
-    let textureRight = new THREE.TextureLoader().setPath('../../Assets/skybox/').load('posx.jpg');
-    let textureLeft = new THREE.TextureLoader().setPath('../../Assets/skybox/').load('negx.jpg');
-    let textureDown = new THREE.TextureLoader().setPath('../../Assets/skybox/').load('negy.jpg');
-    let textureUp = new THREE.TextureLoader().setPath('../../Assets/skybox/').load('posy.jpg');
-    let textureForward = new THREE.TextureLoader().setPath('../../Assets/skybox/').load('posz.jpg');
-    let textureBackwards = new THREE.TextureLoader().setPath('../../Assets/skybox/').load('negz.jpg');
+    let textureRight = new THREE.TextureLoader().setPath('../Assets/skybox/').load('posx.jpg');
+    let textureLeft = new THREE.TextureLoader().setPath('../Assets/skybox/').load('negx.jpg');
+    let textureDown = new THREE.TextureLoader().setPath('../Assets/skybox/').load('negy.jpg');
+    let textureUp = new THREE.TextureLoader().setPath('../Assets/skybox/').load('posy.jpg');
+    let textureForward = new THREE.TextureLoader().setPath('../Assets/skybox/').load('posz.jpg');
+    let textureBackwards = new THREE.TextureLoader().setPath('../Assets/skybox/').load('negz.jpg');
 
     materialArray.push(new THREE.MeshBasicMaterial({map : textureForward}));
     materialArray.push(new THREE.MeshBasicMaterial({map : textureBackwards}));

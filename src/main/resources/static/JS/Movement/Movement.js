@@ -1,5 +1,5 @@
-import {DragControls} from "../../three.js-master/examples/jsm/controls/DragControls.js";
-import {OrbitControls} from "../../three.js-master/examples/jsm/controls/OrbitControls.js";
+import {DragControls} from "../../../../../../three.js-master/examples/jsm/controls/DragControls.js";
+import {OrbitControls} from "../../../../../../three.js-master/examples/jsm/controls/OrbitControls.js";
 
 export default class Movement{
     constructor(model, camera, domElement, scene) {
@@ -55,17 +55,17 @@ export default class Movement{
         this.xScaleSlider.addEventListener("input", () => {
             this.scaleModel();
             this.currentShelfYPos = 0;
-            this.addRegal();
+            this.setRegalPosition();
         });
         this.zScaleSlider.addEventListener("input", () => {
             this.scaleModel();
             this.currentShelfYPos = 0;
-            this.addRegal();
+            this.setRegalPosition();
         });
         this.yScaleSlider.addEventListener("input", () => {
             this.scaleModel();
             this.currentShelfYPos = 0;
-            this.addRegal();
+            this.setRegalPosition();
         });
         this.regalOutput.addEventListener("input", () => {
            this.changeOutputSlider(this.regalOutput, this.regalAnzahl);
@@ -102,8 +102,7 @@ export default class Movement{
                 box.getCenter(this.model.origin);
                 if(this.regalAnzahl.value > 1) {
                     this.currentShelfYPos = box.getSize(this.model.origin).y / this.regalAnzahl.value;
-                    let x = this.shelfMesh.position.x;
-                    this.setRegalPosition(x);
+                    this.setRegalPosition();
                 }
             }
         });
@@ -119,15 +118,15 @@ export default class Movement{
                     this.currentShelfYPos = box.getSize(this.model.origin).y / this.regalAnzahl.value;
                     clonedShelf = this.shelfMesh.clone();
                     this.shelfs.push(clonedShelf);
-                    let x = this.shelfMesh.position.x;
-                    this.setRegalPosition(x);
+                    this.setRegalPosition();
                 }
             }
         });
         this.model.add(clonedShelf);
     }
 
-    setRegalPosition(x){
+    setRegalPosition(){
+        let x = this.shelfMesh.position.x;
         this.shelfMesh.position.y = this.currentShelfYPos;
         this.shelfs.forEach((regal) => {
             this.currentShelfYPos += 1;

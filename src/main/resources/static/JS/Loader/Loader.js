@@ -1,4 +1,4 @@
-import { GLTFLoader } from "../../three.js-master/examples/jsm/loaders/GLTFLoader.js";
+import { GLTFLoader } from "../../../../../../three.js-master/examples/jsm/loaders/GLTFLoader.js";
 import Movement from "../Movement/Movement.js";
 import MaterialManager from "../MaterialManager.js";
 
@@ -22,6 +22,7 @@ export default class  {
             });
             new Movement(gltfScene, camera, domElement, scene);
             new MaterialManager(gltfScene);
+            console.log(gltfScene);
             scene.add(gltfScene);
         }, undefined, function ( error ) {
             console.error( error );
