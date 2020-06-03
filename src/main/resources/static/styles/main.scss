@@ -1,0 +1,70 @@
+$contentBG : #202020;
+$controlBG : #fff;
+$controlSectionBG : lightgray;
+html{
+  width: 100%;
+  margin-left: 0;
+  top: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  body{
+    width: 100%;
+    margin-left: 0;
+    top: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: $controlBG;
+    overflow: hidden;
+    .controlPanel{
+      display: flex;
+      position: fixed;
+      padding: 1%;
+      max-width: 100%;
+      .controlSection{
+        flex-direction: column;
+        justify-content: center;
+        border: 4px solid lavender;
+        background-color: $controlBG;
+        border-radius: 10px;
+        max-width: 20%;
+        min-width: 22%;
+        margin-left: 1%;
+        padding: 0.5%;
+        label{
+          padding: 0.5%;
+          display: flex;
+        }
+        input{
+          background-color: orangered;
+          color: $controlBG;
+          border: 2px solid orangered;
+          border-radius: 10px;
+          padding: 1%;
+          min-width: 10%;
+          max-width: 30%;
+          &:focus{
+            transition-property: background-color;
+            transition-timing-function: ease-in-out;
+            transition-duration: 0.2s;
+            background-color: springgreen;
+            outline: none;
+          }
+
+          &.selection{
+            margin: 0 2% 0 2%;
+            background-color: $controlBG;
+            cursor: pointer;
+            max-width: 5%;
+
+            &:hover{
+              opacity: 50%;
+            }
+
+            background-repeat: no-repeat;
+            background-size: 75px;
+          }
+        }
+      }
+    }
+  }
+}

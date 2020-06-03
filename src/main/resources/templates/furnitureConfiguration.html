@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Three.JS Test</title>
+    <link rel="stylesheet" href="/styles/test.css">
+</head>
+<body>
+<div class="controlPanel">
+    <div th:replace="snippets/translationPanel"></div>
+    <div th:replace="snippets/rotationPanel"></div>
+    <div th:replace="snippets/scalePanel"></div>
+    <div th:replace="snippets/materialPanel"></div>
+</div>
+<script src="/three.js-master/build/three.js"></script>
+<script type="module" src="/JS/configuration.js"></script>
+</body>
+</html>

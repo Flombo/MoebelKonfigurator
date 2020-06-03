@@ -1,0 +1,193 @@
+@keyframes switchMobile {
+  0% {
+    width: 100%;
+    opacity: 100%;
+  }
+  25% {
+    width: 75%;
+    opacity: 75%;
+  }
+  50% {
+    width: 50%;
+    opacity: 50%;
+  }
+  75% {
+    width: 25%;
+    opacity: 25%;
+  }
+  100% {
+    width: 0%;
+    opacity: 0%;
+  }
+}
+@keyframes switch {
+  0% {
+    width: 55%;
+    opacity: 100%;
+  }
+  25% {
+    width: 45%;
+    opacity: 75%;
+  }
+  50% {
+    width: 35%;
+    opacity: 50%;
+  }
+  75% {
+    width: 25%;
+    opacity: 25%;
+  }
+  100% {
+    width: 0%;
+    opacity: 0%;
+  }
+}
+html {
+  background-color: #202020;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+html body {
+  font-family: "Roboto";
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 0;
+}
+html body h1 {
+  font-family: Roboto;
+  color: #ffffff;
+}
+html body form {
+  z-index: 9999999;
+  width: 100%;
+}
+html body form input {
+  background-color: #202020;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  color: #ffffff;
+  width: 75%;
+  padding: 1%;
+  margin-bottom: 2%;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  font-size: 40px;
+}
+html body form input:focus {
+  outline: 0;
+  background-color: #ffffff;
+  color: #000;
+}
+html body form .buttonContainer {
+  width: 81%;
+  margin-left: 4%;
+}
+html body form .buttonContainer button {
+  background-color: #202020;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 3%;
+  width: 47%;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  font-size: 30px;
+}
+html body form .buttonContainer button:focus {
+  outline: 0;
+}
+html body form .buttonContainer button:hover {
+  cursor: pointer;
+  opacity: 50%;
+}
+html body form .buttonContainer button#register {
+  border-color: salmon;
+  color: salmon;
+}
+html body form .buttonContainer .locked {
+  transition-property: border-color;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  border-color: lightgrey;
+  color: lightgrey;
+  cursor: not-allowed !important;
+}
+html body form .buttonContainer .unlocked {
+  border-color: springgreen;
+  color: springgreen;
+}
+html body .visible {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: switchMobile 0.3s ease-in reverse;
+}
+html body .invisible {
+  display: none;
+  animation: switchMobile 0.3s ease-out;
+}
+html body p {
+  font-size: 15px;
+}
+html body .error {
+  color: salmon;
+}
+html body .success {
+  color: springgreen;
+}
+html body #animationContainer {
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+html body #animationContainer img {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  opacity: 0.5;
+  animation: rising 10s infinite ease-in;
+}
+@keyframes rising {
+  0% {
+    transform: translateX(0);
+    transform: translateZ(0);
+  }
+  50% {
+    transform: translateX(500px);
+    transform: translateZ(500px);
+  }
+  100% {
+    bottom: 3080px;
+    left: 3000px;
+    transform: translateX(1000px);
+    transform: translateZ(1000px);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  html body form {
+    width: 55%;
+  }
+  html body .visible {
+    animation: switch 0.3s ease-in reverse;
+  }
+  html body .invisible {
+    animation: switch 0.3s ease-out;
+  }
+}
+
+/*# sourceMappingURL=authentification.css.map */

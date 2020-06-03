@@ -1,0 +1,66 @@
+html {
+  width: 100%;
+  margin-left: 0;
+  top: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+html body {
+  width: 100%;
+  margin-left: 0;
+  top: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: #fff;
+  overflow: hidden;
+}
+html body .controlPanel {
+  display: flex;
+  position: fixed;
+  padding: 1%;
+  max-width: 100%;
+}
+html body .controlPanel .controlSection {
+  flex-direction: column;
+  justify-content: center;
+  border: 4px solid lavender;
+  background-color: #fff;
+  border-radius: 10px;
+  max-width: 20%;
+  min-width: 22%;
+  margin-left: 1%;
+  padding: 0.5%;
+}
+html body .controlPanel .controlSection label {
+  padding: 0.5%;
+  display: flex;
+}
+html body .controlPanel .controlSection input {
+  background-color: orangered;
+  color: #fff;
+  border: 2px solid orangered;
+  border-radius: 10px;
+  padding: 1%;
+  min-width: 10%;
+  max-width: 30%;
+}
+html body .controlPanel .controlSection input:focus {
+  transition-property: background-color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+  background-color: springgreen;
+  outline: none;
+}
+html body .controlPanel .controlSection input.selection {
+  margin: 0 2% 0 2%;
+  background-color: #fff;
+  cursor: pointer;
+  max-width: 5%;
+  background-repeat: no-repeat;
+  background-size: 75px;
+}
+html body .controlPanel .controlSection input.selection:hover {
+  opacity: 50%;
+}
+
+/*# sourceMappingURL=main.css.map */
